@@ -1,2 +1,2 @@
 # ec2-instance
-Create ec2 instance bu using ansible playbook
+Create ec2 instance by using ansible playbook
