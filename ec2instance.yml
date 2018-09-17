@@ -1,0 +1,17 @@
+---
+- name: Provision EC2 instance
+  hosts: localhost
+  connection: local
+  tasks:
+    - ec2:
+        key_name: aws-class
+        region: us-east-1
+        instance_type: t2.micro
+        image: ami-0ff8a91507f77f867
+        wait: yes
+        group: Web
+        count: 1
+        vpc_subnet_id: subnet-04bbee4e
+        assign_public_ip: yes
+        state: present
+
